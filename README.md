@@ -1,9 +1,10 @@
 # Eco Heroes
 
 Jogo desenvolvido na Godot Engine como projeto para a Extensão.
-Integrantes:
-Vitor Ferreira da Silva
-Lucas Fernandes Hidalgo
+
+## Integrantes:
+- Vitor Ferreira da Silva
+- Lucas Fernandes Hidalgo
 
 ## Links
 - **Jogar online (itch.io):** https://vitorferreira.itch.io/eco-heroes
