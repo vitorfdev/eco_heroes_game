@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://x6mkeik6hway"]
+
+[ext_resource type="Script" uid="uid://b36takck7bfqb" path="res://scripts/main_menu.gd" id="1_mainmenu"]
+[ext_resource type="Texture2D" uid="uid://bwt14w8xcexix" path="res://assets/background.png" id="2_8ln24"]
+[ext_resource type="PackedScene" path="res://scenes/settings_menu.tscn" id="2_settings"]
+[ext_resource type="StyleBox" path="res://assets/menu_panel_style.tres" id="3_menu_style"]
+[ext_resource type="Texture2D" uid="uid://dtrl8p3pf54q6" path="res://assets/logo_branca.png" id="3_rtw2f"]
+
+[node name="MainMenu" type="Control" unique_id=456079747]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mainmenu")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1741752813]
+position = Vector2(340.4167, 190)
+scale = Vector2(0.5052083, 0.5052083)
+texture = ExtResource("2_8ln24")
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1304933071]
+position = Vector2(325, 106.99999)
+scale = Vector2(0.39232677, 0.39232674)
+texture = ExtResource("3_rtw2f")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1374912837]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 76.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=1060880131]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_menu_style")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer" unique_id=1060880132]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Play" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1406435765]
+layout_mode = 2
+text = "Jogar"
+
+[node name="Settings" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1216302981]
+layout_mode = 2
+text = "Configurações"
+
+[node name="Exit" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=179320771]
+visible = false
+layout_mode = 2
+text = "Sair"
+
+[node name="SettingsMenu" parent="." unique_id=252284491 instance=ExtResource("2_settings")]
+layout_mode = 1

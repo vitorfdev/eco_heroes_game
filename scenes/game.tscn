@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://m6exlfym5qjk"]
+
+[ext_resource type="PackedScene" uid="uid://yr8736iigt2b" path="res://scenes/hud.tscn" id="1_hud"]
+[ext_resource type="Script" uid="uid://c7d0rlfffj7dy" path="res://scripts/game_manager.gd" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://c0fvnsp8e4ulf" path="res://scenes/upgrades_menu.tscn" id="2_upgrades"]
+[ext_resource type="PackedScene" uid="uid://dyrt75t5ernos" path="res://scenes/stats_menu.tscn" id="3_stats"]
+[ext_resource type="PackedScene" uid="uid://qbjr2rggxfik" path="res://scenes/info_menu.tscn" id="4_info"]
+[ext_resource type="PackedScene" path="res://scenes/settings_menu.tscn" id="5_settings"]
+[ext_resource type="Texture2D" uid="uid://b1lyk3fb625cp" path="res://assets/Parallax Forest.png" id="7_u5sy4"]
+
+[node name="Game" type="Node2D" unique_id=976204073]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=98322917]
+texture = ExtResource("7_u5sy4")
+centered = false
+
+[node name="EnemyHolder" type="Node2D" parent="." unique_id=148108358]
+position = Vector2(482, 114)
+
+[node name="GameManager" type="Node" parent="." unique_id=1050411273 groups=["GameManager"]]
+script = ExtResource("2_lnu2h")
+
+[node name="DpsTimer" type="Timer" parent="." unique_id=2050149498]
+autostart = true
+
+[node name="BossTimer" type="Timer" parent="." unique_id=128586546]
+wait_time = 30.0
+one_shot = true
+
+[node name="HUD" parent="." unique_id=675976456 instance=ExtResource("1_hud")]
+
+[node name="UpgradesMenu" parent="HUD" unique_id=1143106336 instance=ExtResource("2_upgrades")]
+
+[node name="StatsMenu" parent="HUD" unique_id=1619042177 instance=ExtResource("3_stats")]
+
+[node name="InfoMenu" parent="HUD" unique_id=654513267 instance=ExtResource("4_info")]
+
+[node name="SettingsMenu" parent="HUD" unique_id=384924308 instance=ExtResource("5_settings")]

@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://yr8736iigt2b"]
+
+[ext_resource type="Script" uid="uid://lssood15fvcf" path="res://scripts/hud.gd" id="1_hud"]
+[ext_resource type="Texture2D" uid="uid://c1m74lh3t6mgu" path="res://assets/Sample-InventorySlotsSet.png" id="2_oo0fn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhunq"]
+atlas = ExtResource("2_oo0fn")
+region = Rect2(0, 0, 107, 130)
+
+[node name="HUD" type="CanvasLayer" unique_id=167250689]
+script = ExtResource("1_hud")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=759319790]
+position = Vector2(145.75, 184.7897)
+scale = Vector2(2.5654209, 2.5654209)
+texture = SubResource("AtlasTexture_bhunq")
+
+[node name="Control" type="Control" parent="." unique_id=530646577]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = 55.0
+offset_right = 21.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="EndGamePanel" type="ColorRect" parent="Control" unique_id=815124527]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.65)
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/EndGamePanel" unique_id=173439562]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/EndGamePanel/CenterContainer" unique_id=1920244306]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Fim de jogo"
+horizontal_alignment = 1
+
+[node name="TopBar" type="MarginContainer" parent="Control" unique_id=1454044925]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 268.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="HUDContent" type="Control" parent="Control/TopBar" unique_id=488617857]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Points" type="Label" parent="Control/TopBar/HUDContent" unique_id=177860367]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -25.0
+offset_right = 613.0
+offset_bottom = -2.0
+theme_override_font_sizes/font_size = 22
+text = "Pontos: 0"
+
+[node name="Level" type="Label" parent="Control/TopBar/HUDContent" unique_id=92583658]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 613.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 22
+text = "Fase: 1"
+
+[node name="DPC" type="Label" parent="Control/TopBar/HUDContent" unique_id=1387356221]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 25.0
+offset_right = 613.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 22
+text = "Dano por Click: 1.0"
+
+[node name="DPS" type="Label" parent="Control/TopBar/HUDContent" unique_id=1514490848]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 50.0
+offset_right = 613.0
+offset_bottom = 73.0
+theme_override_font_sizes/font_size = 22
+text = "Dano por Segundo: 0.0"
+
+[node name="Progress" type="Label" parent="Control/TopBar/HUDContent" unique_id=291067605]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 75.0
+offset_right = 613.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 22
+text = "Progresso da fase:
+0/10"
+
+[node name="Upgrades" type="Button" parent="Control/TopBar/HUDContent" unique_id=856268101]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 198.0
+offset_right = 105.0
+offset_bottom = 229.0
+theme_override_font_sizes/font_size = 14
+text = "Melhorias"
+
+[node name="Stats" type="Button" parent="Control/TopBar/HUDContent" unique_id=2020636285]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 198.0
+offset_right = 229.0
+offset_bottom = 229.0
+theme_override_font_sizes/font_size = 14
+text = "Atributos"
+
+[node name="Settings" type="Button" parent="Control/TopBar/HUDContent" unique_id=2076218459]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 237.0
+offset_right = 105.0
+offset_bottom = 268.0
+theme_override_font_sizes/font_size = 14
+text = "Configurações"
+
+[node name="Info" type="Button" parent="Control/TopBar/HUDContent" unique_id=140120440]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 237.0
+offset_right = 229.0
+offset_bottom = 268.0
+theme_override_font_sizes/font_size = 14
+text = "Info"
+
+[node name="PrevLevel" type="Button" parent="Control/TopBar/HUDContent" unique_id=591015077]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 131.0
+offset_right = 72.0
+offset_bottom = 162.0
+text = "Fase -1"
+
+[node name="NextLevel" type="Button" parent="Control/TopBar/HUDContent" unique_id=1063754037]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 131.0
+offset_right = 150.0
+offset_bottom = 162.0
+text = "Fase +1"
+
+[node name="AutoAdvance" type="Button" parent="Control/TopBar/HUDContent" unique_id=140446398]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 131.0
+offset_right = 228.0
+offset_bottom = 162.0
+text = "Auto:ON"

@@ -1,0 +1,31 @@
+[gd_resource type="Theme" format=3 uid="uid://cac1rsb5prh1v"]
+
+[ext_resource type="FontFile" uid="uid://cco7hu4c17fuh" path="res://assets/BoldPixels.ttf" id="1_bold_pixels"]
+[ext_resource type="StyleBox" uid="uid://brewllr7xrcos" path="res://assets/button_normal_style.tres" id="2_button_normal"]
+[ext_resource type="StyleBox" uid="uid://bvg1amk6sx0sp" path="res://assets/button_hover_style.tres" id="3_button_hover"]
+[ext_resource type="StyleBox" uid="uid://beo42l04cqbrw" path="res://assets/button_pressed_style.tres" id="4_button_pressed"]
+[ext_resource type="StyleBox" uid="uid://cm5wlw3xwxewm" path="res://assets/button_disabled_style.tres" id="5_button_disabled"]
+
+[resource]
+default_font = ExtResource("1_bold_pixels")
+default_font_size = 16
+Button/fonts/font = ExtResource("1_bold_pixels")
+Button/styles/disabled = ExtResource("5_button_disabled")
+Button/styles/focus = ExtResource("2_button_normal")
+Button/styles/hover = ExtResource("3_button_hover")
+Button/styles/normal = ExtResource("2_button_normal")
+Button/styles/pressed = ExtResource("4_button_pressed")
+CheckBox/fonts/font = ExtResource("1_bold_pixels")
+CheckButton/fonts/font = ExtResource("1_bold_pixels")
+ItemList/fonts/font = ExtResource("1_bold_pixels")
+Label/fonts/font = ExtResource("1_bold_pixels")
+LineEdit/fonts/font = ExtResource("1_bold_pixels")
+PopupMenu/fonts/font = ExtResource("1_bold_pixels")
+RichTextLabel/fonts/bold_font = ExtResource("1_bold_pixels")
+RichTextLabel/fonts/bold_italics_font = ExtResource("1_bold_pixels")
+RichTextLabel/fonts/italics_font = ExtResource("1_bold_pixels")
+RichTextLabel/fonts/mono_font = ExtResource("1_bold_pixels")
+RichTextLabel/fonts/normal_font = ExtResource("1_bold_pixels")
+TabBar/fonts/font = ExtResource("1_bold_pixels")
+TooltipLabel/fonts/font = ExtResource("1_bold_pixels")
+Tree/fonts/font = ExtResource("1_bold_pixels")

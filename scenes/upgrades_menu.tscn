@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://c0fvnsp8e4ulf"]
+
+[ext_resource type="Script" uid="uid://hkl5vhegl0h3" path="res://scripts/upgrades_menu.gd" id="1_upgrades"]
+[ext_resource type="StyleBoxTexture" path="res://assets/menu_panel_style.tres" id="2_menu_style"]
+
+[node name="UpgradesMenu" type="Control" unique_id=1347673286]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_upgrades")
+
+[node name="Panel" type="Panel" parent="." unique_id=1659156209]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -160.0
+offset_right = 290.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_menu_style")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=186622402]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=514958197]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=310587902]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/VBoxContainer/Header" unique_id=2074088898]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Upgrades"
+
+[node name="Close" type="Button" parent="Panel/MarginContainer/VBoxContainer/Header" unique_id=1269457101]
+layout_mode = 2
+text = "Fechar"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1502580994]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RowsContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1661316220]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TemplateRow" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/RowsContainer" unique_id=703530054]
+visible = false
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/RowsContainer/TemplateRow" unique_id=199326881]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Upgrade"
+
+[node name="Level" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/RowsContainer/TemplateRow" unique_id=811529243]
+layout_mode = 2
+text = "Lv 0"
+
+[node name="Price" type="Label" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/RowsContainer/TemplateRow" unique_id=264737417]
+layout_mode = 2
+text = "Custo: 0"
+
+[node name="Buy" type="Button" parent="Panel/MarginContainer/VBoxContainer/ScrollContainer/RowsContainer/TemplateRow" unique_id=317512703]
+layout_mode = 2
+text = "Comprar"
